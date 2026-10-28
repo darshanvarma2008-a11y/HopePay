@@ -1,5 +1,21 @@
 #include <iostream>
+#include <string>
 using namespace std;
+
+void registerBill() {
+    string name;
+    double amount;
+
+    cout << "\nEnter person's name: ";
+    getline(cin, name);
+
+    cout << "Enter bill amount (Rs.): ";
+    cin >> amount;
+
+    cout << "\n----- Bill Registered -----" << endl;
+    cout << "Person: " << name << endl;
+    cout << "Bill Amount: Rs. " << amount << endl;
+}
 
 int main() {
     int choice;
@@ -17,14 +33,16 @@ int main() {
         cout << "Enter your choice: ";
         cin >> choice;
 
+        cin.ignore(10000, '\n');
+
         if (choice == 1) {
-            cout << "You selected Register a Bill." << endl;
+            registerBill();
         }
         else if (choice == 2) {
-            cout << "You selected View All Bills." << endl;
+            cout << "View All Bills selected." << endl;
         }
         else if (choice == 3) {
-            cout << "You selected Donate to a Bill." << endl;
+            cout << "Donate to a Bill selected." << endl;
         }
         else if (choice == 4) {
             cout << "Thank you for using HopePay!" << endl;
