@@ -1,15 +1,23 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main() {
-    cout << "============================" << endl;
-    cout << "         HOPEPAY" << endl;
-    cout << "============================" << endl;
+    string name;
+    double amount;
 
-    cout << "1. Register a Bill" << endl;
-    cout << "2. View All Bills" << endl;
-    cout << "3. Donate to a Bill" << endl;
-    cout << "4. Exit" << endl;
+    cout << "Welcome to HopePay!" << endl;
+
+    cout << "Enter your name: ";
+    getline(cin, name);
+
+    cout << "Enter your bill amount: ";
+    cin >> amount;
+
+    cout << endl;
+    cout << "----- Bill Details -----" << endl;
+    cout << "Name: " << name << endl;
+    cout << "Bill Amount: Rs. " << amount << endl;
 
     return 0;
 }
