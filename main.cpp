@@ -15,7 +15,7 @@ public:
     }
 };
 
-// Register a new bill
+
 void registerBill(vector<Bill>& bills) {
     Bill newBill;
 
@@ -33,7 +33,6 @@ void registerBill(vector<Bill>& bills) {
     cout << "Bill Amount: Rs. " << newBill.amount << endl;
 }
 
-// View all registered bills
 void viewAllBills(const vector<Bill>& bills) {
     if (bills.empty()) {
         cout << "\nNo bills registered yet." << endl;
@@ -67,7 +66,7 @@ void viewAllBills(const vector<Bill>& bills) {
     }
 }
 
-// Donate to a bill
+
 void donateToBill(vector<Bill>& bills) {
     if (bills.empty()) {
         cout << "\nNo bills available for donation." << endl;
